@@ -1,0 +1,62 @@
+@import "../base/_variaveis";
+
+.carrossel {
+    .carrossel__titulo {
+        color: $laranja;
+        background-color: $branco;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 1.2rem 0 .5rem 0;
+    }
+    .swiper {
+        .swiper-slide {
+            img {
+                width: 100%;
+            }
+        }
+        .swiper-button-prev, .swiper-button-next {
+            display: none;
+        }
+        .swiper-pagination{
+            position: initial;
+            margin: .5rem 0;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+    .carrossel {
+        .carrossel__titulo {
+            font-size: 26px;
+        }
+        .swiper-pagination {
+            margin: 2rem 0 3rem 0;
+        }
+        .swiper {
+            width: 60%;
+        }
+        .swiper-button-prev, .swiper-button-next {
+            display: block !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .carrossel {
+        .container__carrossel {
+            display: flex;
+            align-items: center;
+            column-gap: 1.5rem;
+            margin: 0 8vw 3rem 8vw;
+        }
+        .swiper-pagination{
+            margin: 1rem 0;
+        }
+        .swiper{
+            width: 55%;
+        }
+    }
+}

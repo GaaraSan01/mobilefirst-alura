@@ -1,0 +1,59 @@
+@import "../base/_variaveis";
+
+.contato {
+    background-color: $branco;
+    padding: 1rem;
+    .contato__title, .contato__text {
+        background: $azul-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .contato__title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .contato__text {
+        font-weight: 300;
+        font-size: 16px;
+        margin: 1rem 0;
+    }
+    .contato__email {
+        padding: 1rem;
+        border: solid 1px $azul;
+        border-radius: 1.5rem;
+        width: 100%;
+        color: $azul;
+        &::placeholder {
+            color: $azul;
+            font-family: $font-principal;
+            background: url(../../assets/icons/Email.svg) no-repeat;
+            background-size: auto;
+            background-position: 0% 50%;
+            padding-left: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .contato {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .contato__description {
+            width: 30%;
+            .contato__title {
+                font-size: 1.5em;
+            }
+        }
+        .contato__email {
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .contato {
+        padding: 3rem 16vw;
+    }
+}

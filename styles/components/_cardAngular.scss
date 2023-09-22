@@ -1,0 +1,68 @@
+@import "../base/_variaveis";
+
+.card {
+    border-radius: 10px;
+    background: $branco;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
+    padding: 1rem;
+    .card__description {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        column-gap: .5rem;
+        .description__title {
+            color: $laranja;
+            font-weight: 700;
+        }
+        .description__title-book {
+            color: $azul;
+            font-size: 18px;
+            font-weight: 700;
+            margin: .5rem 0;
+        }
+        .description__text {
+            font-size: 14px;
+        }
+    }
+    .card__buttons {
+        display: flex;
+        justify-content: space-between;
+        .buttons {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            .buttons__item {
+                margin: 0 .5rem;
+            }
+        }
+        .buttons__ancora {
+            background-color: $laranja;
+            padding: 1rem 2.2rem;
+            color: $branco;
+            font-weight: 700;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (min-width: 960px){
+    .card {
+        width: 48%;
+        margin: 2rem auto;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .card {
+        width: 60%;
+        .card__description {
+            .description__title{
+                font-size: 32px;
+            }
+            .description__text{
+                font-size: 16px;
+            }
+        }
+    }
+}
